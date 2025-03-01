@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "cross-env NODE_ENV=development node app.js",
-    "start:staging": "cross-env NODE_ENV=staging node app.js",
-    "start:prod": "cross-env NODE_ENV=production node app.js"
+    "start:dev": "nodemon start.js development",
+    "start:staging": "nodemon start.js staging",
+    "start:prod": "nodemon start.js production"
   },
   "keywords": [],
   "author": "",

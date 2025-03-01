@@ -145,7 +145,7 @@ exports.protect = catchAsync(async (req, res, next) => {
   }
   // 2) Check if token is valid
   // use promisify to make return of promise
-  const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
+  const decoded = await promisify(jwt.verify)(token, process.env.JWT_ACCESS_SECRET);
 
   // die akan ada dua error invalid signature and expired token
 
