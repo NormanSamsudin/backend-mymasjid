@@ -1,0 +1,69 @@
+
+{
+  "admin": "67c3c5962a871ff504aed232",
+  "name": "Masjid Al-Najihin Baru",
+  "address": "Jalan Sri Permaisuri, Bandar Sri Permaisuri, 56000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+  "city": "Bandar Sri Permaisuri",
+  "state": "Kuala Lumpur",
+  "country": "Malaysia",
+  "postalCode": "56000",
+  "contactEmail": "najihin@mymasjid.com",
+  "contactPhone": "+03 123456789",
+  "website": "https://najihin.com",
+  "capacity": 1000000,
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      39.8262,
+      21.4225
+    ]
+  },
+  "imageUrl": "https://example.com/images/alharam.jpg",
+  "qrUrl": "https://example.com/qr/alharam.png"
+}
+
+{
+  "admin": "67c3ca476bde9efd8f5e48cc",
+  "name": "Masjid Azzubair Ibn Awwam",
+  "address": "Jalan Sekilau, Taman Ikhsan, 56000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+  "city": "Taman Ikhsan",
+  "state": "Kuala Lumpur",
+  "country": "Malaysia",
+  "postalCode": "56000",
+  "contactEmail": "azzubir@mymasjid.com",
+  "contactPhone": "+03 123456789",
+  "website": "https://azzubir.com",
+  "capacity": 1000000,
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      101.7014857,
+      3.113894
+    ]
+  },
+  "imageUrl": "https://example.com/images/azzubir.jpg",
+  "qrUrl": "https://example.com/qr/azzubir.png"
+}
+
+{
+  "admin": "67c3ca756bde9efd8f5e48ce",
+  "name": "National Mosque of Malaysia",
+  "address": "Jalan Perdana, Tasik Perdana, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+  "city": "Tasik Perdana",
+  "state": "Kuala Lumpur",
+  "country": "Malaysia",
+  "postalCode": "50480",
+  "contactEmail": "national@mymasjid.com",
+  "contactPhone": "+03 123456789",
+  "website": "https://national.com",
+  "capacity": 1000000,
+  "location": {
+    "type": "Point",
+    "coordinates": [
+       101.6891824,
+       3.1419837
+    ]
+  },
+  "imageUrl": "https://example.com/images/azzubir.jpg",
+  "qrUrl": "https://example.com/qr/azzubir.png"
+}

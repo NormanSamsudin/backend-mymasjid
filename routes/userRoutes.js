@@ -6,6 +6,7 @@ const authController = require('../controllers/authController');
 const userRoutes = express.Router();
 
 userRoutes.post('/signup' ,authController.signup);
+userRoutes.post('/signup-admin-masjid' ,authController.signupAdminMasjid);
 userRoutes.post('/login', authController.login);
 userRoutes.post('/refresh-token', authController.refreshToken);
 userRoutes.post('/forgot-password', authController.forgotPassword);

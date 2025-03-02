@@ -6,6 +6,7 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const userRouter = require('./routes/userRoutes');
 const healthRouter = require('./routes/healthRoutes');
+const mosqueRouter = require('./routes/mosqueRoutes');
 const secureHeaders = require('./utils/security/secureHeader');
 const limiter = require('./utils/security/limiter');
 const { morganMiddleware } = require("./utils/security/logger");
@@ -23,6 +24,7 @@ app.use('/public', express.static('public'));
 
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/health', healthRouter);
+app.use('/api/v1/mosque', mosqueRouter)
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
