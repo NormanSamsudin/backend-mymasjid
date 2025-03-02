@@ -8,21 +8,14 @@ const mosqueRoutes = express.Router();
 mosqueRoutes.get('/', mosqueController.getAllMosques); // Get all mosques
 mosqueRoutes.get('/:id', mosqueController.getMosque); // Get a single mosque by ID
 
-// // Protect all routes after this middleware
-// mosqueRoutes.use(authController.protect);
+mosqueRoutes.patch(
+  '/upload/:id',
+  mosqueController.uploadMosquePhoto,
+  mosqueController.resizeMosquePhoto,
+  mosqueController.updateMosqueImage
+); // Update mosque details admin only)
 
-// // Routes for logged-in users (mosque admins)
-// mosqueRoutes.patch('/updateMyPassword', authController.updatePassword); // Update password for logged-in admin
-// mosqueRoutes.get('/me', mosqueController.getMyMosque, mosqueController.getMosque); // Get the current mosque (based on logged-in admin)
-// mosqueRoutes.patch(
-//   '/updateMe',
-//   mosqueController.uploadMosquePhoto,
-//   mosqueController.resizeMosquePhoto,
-//   mosqueController.updateMyMosque
-// ); // Update mosque details (for logged-in admin)
-// mosqueRoutes.patch('/deactivateMe', mosqueController.deactivateMosque); // Deactivate the current mosque (soft delete)
-
-// // Restrict the following routes to 'admin' role
+// Restrict the following routes to 'admin' role
 mosqueRoutes.use(authController.restrictTo('admin-masjid'));
 
 // Admin-only routes

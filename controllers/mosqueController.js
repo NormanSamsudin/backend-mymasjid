@@ -87,6 +87,28 @@ exports.updateMyMosque = catchAsync(async (req, res, next) => {
   });
 });
 
+
+// Update mosque image (for the logged-in admin)
+exports.updateMosqueImage = catchAsync(async (req, res, next) => {
+
+  const filteredBody = filterObj(
+    req.body,
+    'imageUrl'
+  );
+
+  // Update only the imageUrl field
+  const updatedMosque = await Mosque.findByIdAndUpdate(
+    req.params.id,
+    filteredBody,
+    { new: true, runValidators: true }
+  );
+
+  res.status(200).json({
+    status: 'success',
+    data: { mosque: updatedMosque },
+  });
+});
+
 // Deactivate a mosque (soft delete)
 exports.deactivateMosque = catchAsync(async (req, res, next) => {
   await Mosque.findByIdAndUpdate(req.params.id, { active: false });
