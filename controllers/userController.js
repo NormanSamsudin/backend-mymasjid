@@ -2,7 +2,7 @@ const multer = require('multer');
 const sharp = require('sharp');
 const catchAsync = require('./../utils/catchAsync');
 const User = require('./../models/userModel');
-const AppError = require('./../utils/AppError');
+const AppError = require('./../utils/appError');
 const factory = require('./handlerFactory');
 
 // image will be store as buffer

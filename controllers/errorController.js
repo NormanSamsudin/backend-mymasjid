@@ -1,4 +1,4 @@
-const AppError = require('./../utils/AppError');
+const AppError = require('./../utils/appError');
 
 // custom erroe for invalid Id or path
 // tapi ni kalau tak nak pakai pon takpe
