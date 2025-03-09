@@ -10,6 +10,7 @@ const mosqueRouter = require('./routes/mosqueRoutes');
 const committeeRouter = require('./routes/committeeRoutes');
 const facilityRouter = require('./routes/facilityRoutes')
 const reviewRouter = require('./routes/reviewRoutes')
+const sadaqahRouter = require('./routes/sadaqahRoutes');
 const secureHeaders = require('./utils/security/secureHeader');
 const limiter = require('./utils/security/limiter');
 const { morganMiddleware } = require("./utils/security/logger");
@@ -31,6 +32,7 @@ app.use('/api/v1/mosque', mosqueRouter);
 app.use('/api/v1/committee', committeeRouter);
 app.use('/api/v1/facility', facilityRouter);
 app.use('/api/v1/review', reviewRouter);
+app.use('/api/v1/sadaqah', sadaqahRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
