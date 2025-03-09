@@ -15,7 +15,7 @@ router.post('/:id/register', eventController.registerForEvent);
 router.post('/:id/unregister', eventController.unregisterFromEvent);
 
 // ✅ Restrict image upload & event modifications to admin only
-router.use(authController.restrictTo('admin'));
+router.use(authController.restrictTo('admin-masjid'));
 
 router.post('/', eventController.createEvent);
 
